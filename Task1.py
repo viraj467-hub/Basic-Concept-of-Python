@@ -1,10 +1,6 @@
-a=int(input("Enter first number: "))
-b=int(input("Enter second number: "))
-add= a+b
-sub=a-b
-mul=a*b
-div=a/b
-print("Addition : ",add)
-print("Subtraction : ",sub)
-print("Multiplication : ",mul)
-print("Division : ",div)
+Number=int(input("Enter a number: "))
+
+if (Number %2 == 0):
+    print(Number, "is an even number.")
+else:
+    print(Number, "is an odd number.")
