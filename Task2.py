@@ -1,11 +1,14 @@
-import math
+a = input("Enter text to write to the file: ")
+with open("output.txt", "w") as file:
+    file.write(a + "\n")
+print("Data successfully written to output.txt.\n")
 
-num = int(input("Enter a number: "))
+b = input("Enter additional text to append: ")
+with open("output.txt", "a") as file:
+    file.write(b + "\n")
+print("Data successfully appended.\n")
 
-square_root = math.sqrt(num)
-natural_log = math.log(num)
-sine_value = math.sin(num)
-
-print(f"Square root: {square_root}")
-print(f"Natural logarithm: {natural_log}")
-print(f"Sine: {sine_value}")
+print("Final content of output.txt:")
+with open("output.txt", "r") as file:
+    content = file.read()
+print(content)
