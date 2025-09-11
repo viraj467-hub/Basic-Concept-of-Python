@@ -1,9 +1,12 @@
-def read_file(sample):
-    try:
-        with open('sample.txt', "r") as file:
-            print("Reading file content:\n")
-            content = file.read()
-            print(content)
-    except FileNotFoundError:
-        print(f"Error: The file '{sample}' was not found.")
-read_file("sample.txt")
+key = {
+    "Viraj" : 93,
+    "Manoj" : 85,
+    "Ballu" : 78,
+    "vivek" : 81,
+}
+
+name = input("Enter your student's name: ")
+if name in key:
+    print(f"{name}'s marks: {key[name]}")
+else:
+    print("Student not found.")
